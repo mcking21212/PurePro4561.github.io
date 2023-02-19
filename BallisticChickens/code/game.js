@@ -1,6 +1,6 @@
 const STUFF = getData('save', {
-  money: 0,
-  upgrades: [0,0,0,0,0,0],
+  money: 1000000000000000000000000000000,
+  upgrades: [4,4,4,4,4,4],
   achievements: [],
 });
 
@@ -14,7 +14,7 @@ function shortNum(x) {
   for (let i = 0; i < len; i++) {
     let pow = (len-i)*3 + 3;
     if (x >= 10**pow) {
-      return `${(x/10**pow).toFixed(1)}${letters[len-1-i]}`;
+      return `${(x/1000**pow).toFixed(1)}${letters[len-1-i]}`;
     };
   };
   return x.toLocaleString('en-US')
@@ -44,10 +44,10 @@ scene('game', () => {
   };
 
   var score = 0;
-  var fuel = 50 + upgradeMod(2);
+  var fuel = 501000 + upgradeMod(2);
   var maxFuel = fuel;
   
-  var distace = 0;
+  var distace = 1000000;
   var distanceF = 0;
   var altitude = 0;
   var maxAltitude = 0;
